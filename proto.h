@@ -107,7 +107,8 @@ _PROTOTYPE(extern int enter_str_lst,(char *opt, char *s, struct str_lst **lp,
 _PROTOTYPE(extern int enter_uid,(char *us));
 _PROTOTYPE(extern void ent_inaddr,(unsigned char *la, int lp, unsigned char *fa, int fp, int af));
 _PROTOTYPE(extern int examine_lproc,(void));
-_PROTOTYPE(extern void Exit,(int xv)) exiting;
+_PROTOTYPE(extern void Exit,(enum ExitStatus xv)) exiting;
+_PROTOTYPE(extern void Error,()) exiting;
 _PROTOTYPE(extern void find_ch_ino,(void));
 
 # if	defined(HASEPTOPTS)
@@ -202,7 +203,7 @@ _PROTOTYPE(extern void safestrprtn,(char *sp, int len, FILE *fs, int flags));
 _PROTOTYPE(extern void safestrprt,(char *sp, FILE *fs, int flags));
 _PROTOTYPE(extern int statsafely,(char *path, struct stat *buf));
 _PROTOTYPE(extern void stkdir,(char *p));
-_PROTOTYPE(extern void usage,(int xv, int fh, int version));
+_PROTOTYPE(extern void usage,(int err, int fh, int version));
 _PROTOTYPE(extern int util_strftime,(char *fmtr, int fmtl, char *fmt));
 _PROTOTYPE(extern int vfy_dev,(struct l_dev *dp));
 _PROTOTYPE(extern char *x2dev,(char *s, dev_t *d));
